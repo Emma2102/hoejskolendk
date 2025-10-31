@@ -1,0 +1,29 @@
+---
+import Button from "./Button.astro";
+import Button2 from "./Button2.astro";
+---
+<section>
+  <div class="grid grid-cols-2 bg-[var(--color-bg-100)] rounded-lg shadow-md w-[560px] h-[280px] overflow-hidden hover:scale-105 duration-300 ease-in cursor-pointer">
+    
+    <!-- Venstre: billede med tekst ovenpå -->
+    <div class="relative w-full h-full">
+      <img src={Astro.props.image} alt={Astro.props.title} class="w-full h-full object-cover object-center" />
+
+      <!-- Titel ovenpå billedet -->
+      <h2 class="absolute inset-0 flex items-center justify-center text-bg-100 font-grandstander text-2xl font-bold drop-shadow-lg z-10 text-center">
+        {Astro.props.title}
+      </h2>
+    </div>
+
+    <!-- Højre: beskrivelse -->
+    <div class="p-4 flex flex-col justify-center space-y-7">
+      <p class="font-raleway text-black font-bold text-[20px]">{Astro.props.varighed}</p>
+        <p class="font-raleway text-black mt-2 text-[20px]">{Astro.props.description}</p>
+        <div class="grid grid-cols-2">
+  <Button2>LÆS MERE</Button2>
+        <Button class="mt-5">Bestil</Button>
+        </div>
+    </div>
+
+  </div>
+</section>

@@ -4,12 +4,102 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
+import Card from '../components/Card.astro';
+import Button2 from "../components/Button2.astro";
 ---
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+<section class="relative w-full h-screen overflow-hidden">
+  <!-- Video baggrund -->
+  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+    <source src="/public/hero.mp4" type="video/mp4" />
+    Din browser understøtter ikke video-tagget.
+  </video>
+
+  <!-- Tekst ovenpå videoen -->
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-bg-100 text-center px-6">
+    <h1 class="font-grandstander text-[80px] mb-6 drop-shadow-lg font-bold">
+      HÖJSKOLENDK
+    </h1>
+    <p class="font-raleway text-[30px] max-w-2xl mb-8 drop-shadow-md">
+      DIT LIVS EVENTYR!
+    </p>
+  </div>
+
+  <!-- Optional overlay for bedre kontrast -->
+  <div class="absolute inset-0 bg-black/30 z-5"></div>
+</section>
+
+	<section class="grid grid-cols-2 m-40 gap-10">
+	<div><img class="w-200 rounded-xl" src="public/fallesskab.jpeg" alt="fællesskab"></div>
+	  <div class="h-full flex flex-col justify-between"><div>
+		<h1 class="font-grandstander font-bold text-[64px]">DIT LIVS EVENTYR</h1>
+		<div class="space-y-8 text-[20px]">
+			<p class="font-raleway">HÖJSKOLENDK er en dansk højskole for unge i alderen ca. 18-30 år.</p>		
+<p class="font-raleway">Vi brænder for oplevelser, fællesskab og mødet med nye mennesker og kulturer; derfor laver vi eventyrlige højskoleophold i udlandet.
+HÖJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet og er vild med højskolefællesskab, vil med på et fantastisk rejseeventyr, glæder dig til at lære om fremmede kulturer, vil rejse med rygsæk, drømmer om en fed grupperejse med andre skønne unge, vil opleve et stærkt sammenhold og ønsker inspirerende og meningsfuld undervisning. Du er sikker på en tryg rejseoplevelse da vi er medlem af Rejsegarantifonden.</p>
+<p class="font-raleway">Vi glæder os til at lære dig at kende!</p>
+</div>
+</div>
+	<Button class="mt-5">VÆLG DIT EVENTYR</Button>
+	</div>
+	</section>
+
+	<div><h1 class="font-grandstander font-bold text-[64px] text-center">VÆLG DIT EVENTYR</h1></div>
+	<section class="grid grid-cols-2 m-40 gap-10 mt-20">
+<Card image="/public/hawaii.png" title="HAWAII, AUSTRALIEN, JAPAN, BALI & GILI ISLANDS" varighed="varighed: 3 måneder" description="Vandring, river rafting, Kajak, surfcamp og meget mere..." />
+<Card image="/public/australien.png" title="AUSTRALIEN, NEW ZEALAND, VIETNAM, BALI, GILI ISLANDS & LOMBOK" varighed="varighed: 90 dage" description="Snorkelture, surfcamp, vandring, strande og meget mere..." />
+
+<Card image="/public/australien.png" title="AUSTRALIEN, NEW ZEALAND, VIETNAM, BALI, GILI ISLANDS & LOMBOK" varighed="varighed: 90 dage" description="Snorkelture, surfcamp, vandring, strande og meget mere..." />
+<Card image="/public/hawaii.png" title="HAWAII, AUSTRALIEN, JAPAN, BALI & GILI ISLANDS" varighed="varighed: 3 måneder" description="Vandring, river rafting, Kajak, surfcamp og meget mere..." />
+
+<Card image="/public/hawaii.png" title="HAWAII, AUSTRALIEN, JAPAN, BALI & GILI ISLANDS" varighed="varighed: 3 måneder" description="Vandring, river rafting, Kajak, surfcamp og meget mere..." />
+<Card image="/public/australien.png" title="AUSTRALIEN, NEW ZEALAND, VIETNAM, BALI, GILI ISLANDS & LOMBOK" varighed="varighed: 90 dage" description="Snorkelture, surfcamp, vandring, strande og meget mere..." />
+	</section>
+<div class="text-center my-10">
+  <Button>SE ALLE DESTINATIONER</Button>
+</div>
+
+<section class="m-40 mt-30">
+	<div> <h1 class="font-grandstander font-bold text-[64px]">Højskole i udlandet for unge mennesker</h1></div>
+	<div class="space-y-8 text-[20px]"> 
+		<p class="font-raleway">Drømmer du om at rejse på højskole i udlandet for unge? Når du rejser med HÖJSKOLENDK, får du dit livs eventyr og vi garanterer dig masser af fællesskab, fantastiske oplevelser og meningsfuld læring. Et højskoleophold i udlandet er noget, du bare skal prøve mindst én gang i dit liv – du vil aldrig fortryde, at du tog afsted. Og du kan glæde dig til nye venskaber og oplevelser for livet.</p>
+	<p class="font-raleway">Med HÖJSKOLENDK kan du komme på rejsende højskole i stort set alle hjørner af verdenen. Drømmer du om smukke og vilde naturoplevelser på Bali, Hawaii, Maldiverne eller i Australien? Storbyseventyr i New York, Sydney, Tokyo, Bangkok eller Rio de Janeiro? Kulturelle oplevelser og autentiske menneskemøder i Indien, Bolivia, Sri Lanka, Japan eller Mexico? Fede adventure aktiviteter med masser af adrenalin i New Zealand, Nepal, Ecuador eller Costa Rica? Vælg mellem et af vores fantastiske højskoleophold i udlandet og lad verden gøre dig endnu mere nysgerrig.</p>
+	<p class="font-raleway">Du rejser altid med andre unge mennesker på din egen alder og danske rejseledere og undervisere. På højskolerejsen kommer du ikke kun til at opleve og forstå andre spændende kulturer. Rejserne giver også et unikt indblik i dig selv, så du kommer hjem med mere selvtillid og selvværd og står endnu stærkere som menneske.</p>
+	<p class="font-raleway">At rejse med en højskole er ikke blot et eventyr ud i verden – det er også en spændende rejse i forhold til dig og din personlige udvikling.</p>
+</div>
+</section>
+
+<section class="bg-[var(--color-bg-500)] m-40 rounded">
+	<div class="p-10">
+		<div><p class="text-center font-raleway text-[20px]">Trustscore <strong>4.6</strong> - <strong>140</strong> reviews   </p></div>
+		<div class="flex items-center justify-center"> <a href="https://www.trustpilot.com/review/www.hojskolendk.dk?utm_medium=trustbox&utm_source=Mini" target="_blank" rel="noopener noreferrer"> <img src="/public/trust.png" alt="trustpilot" class="w-80 my-5"/></a></div>
+	</div>
+</section>
+
+<section class="bg-[var(--color-bg-500)] m-40 rounded">
+	<div class="p-10">
+		<h1 class="font-grandstander font-bold text-[40px]">En rejse højskole fyldt med oplevelser</h1>
+
+		<div class="space-y-8 text-[20px]"> 
+		<p class="font-raleway">Drømmer du om at rejse på højskole i udlandet for unge? Når du rejser med HÖJSKOLENDK, får du dit livs eventyr og vi garanterer dig masser af fællesskab, fantastiske oplevelser og meningsfuld læring. Et højskoleophold i udlandet er noget, du bare skal prøve mindst én gang i dit liv – du vil aldrig fortryde, at du tog afsted. Og du kan glæde dig til nye venskaber og oplevelser for livet.</p>
+		<p class="font-raleway">Din højskole rejse kan blandt andet indeholde:</p>
+	 </div>
+	</div>
+</section>
+
+<section>
+	<div> <img class="w-full" src="/public/trae.png" alt="vi gør en forskel" /></div>
+	<div class="text-center my-10"> <Button>Læs mere</Button></div>
+</section>
+
+<section class="m-40 mt-30">
+	<div> <h1 class="font-grandstander font-bold text-[64px]">Uforglemmeligt højskoleophold i udlandet</h1></div>
+	<div class="space-y-8 text-[20px]"> 
+		<p class="font-raleway">Drømmer du om at rejse på højskole i udlandet for unge? Når du rejser med HÖJSKOLENDK, får du dit livs eventyr og vi garanterer dig masser af fællesskab, fantastiske oplevelser og meningsfuld læring. Et højskoleophold i udlandet er noget, du bare skal prøve mindst én gang i dit liv – du vil aldrig fortryde, at du tog afsted. Og du kan glæde dig til nye venskaber og oplevelser for livet.</p>
+	<p class="font-raleway">Med HÖJSKOLENDK kan du komme på rejsende højskole i stort set alle hjørner af verdenen. Drømmer du om smukke og vilde naturoplevelser på Bali, Hawaii, Maldiverne eller i Australien? Storbyseventyr i New York, Sydney, Tokyo, Bangkok eller Rio de Janeiro? Kulturelle oplevelser og autentiske menneskemøder i Indien, Bolivia, Sri Lanka, Japan eller Mexico? Fede adventure aktiviteter med masser af adrenalin i New Zealand, Nepal, Ecuador eller Costa Rica? Vælg mellem et af vores fantastiske højskoleophold i udlandet og lad verden gøre dig endnu mere nysgerrig.</p>
+	<p class="font-raleway">Du rejser altid med andre unge mennesker på din egen alder og danske rejseledere og undervisere. På højskolerejsen kommer du ikke kun til at opleve og forstå andre spændende kulturer. Rejserne giver også et unikt indblik i dig selv, så du kommer hjem med mere selvtillid og selvværd og står endnu stærkere som menneske.</p>
+	<p class="font-raleway">At rejse med en højskole er ikke blot et eventyr ud i verden – det er også en spændende rejse i forhold til dig og din personlige udvikling.</p>
+</div>
+</section>
+
 </MainLayout>

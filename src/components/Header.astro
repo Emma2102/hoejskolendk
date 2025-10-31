@@ -1,5 +1,20 @@
 ---
 ---
-<div>
-Header - tilføj navigation mm.
-</div>
+
+<header class="absolute top-0 left-0 w-full z-20">
+  <nav class="flex items-center justify-between px-12 py-6">
+    <!-- Logo -->
+    <a href="/" class="text-white font-grandstander text-2xl tracking-wide">
+      <img class="w-50" src="/public/LOGO.png" alt="HÖJSKOLENDK Logo" />
+    </a>
+
+    <!-- Navigation -->
+    <ul class="flex space-x-8 text-white font-raleway text-lg">
+      <li><a class="font-grandstander text-bg-100 text-[22px]" href="/destinationer" class="hover:text-[var(--color-prim-500)] transition">Destinationer</a></li>
+      <li><a class="font-grandstander text-bg-100 text-[22px]" href="/" class="hover:text-[var(--color-prim-500)] transition">Hjem</a></li>
+      <li><a class="font-grandstander text-bg-100 text-[22px]" href="/pris" class="hover:text-[var(--color-prim-500)] transition">Pris</a></li>
+      <li><a class="font-grandstander text-bg-100 text-[22px]" href="/om-os" class="hover:text-[var(--color-prim-500)] transition">Om os</a></li>
+    </ul>
+  </nav>
+</header>
+
